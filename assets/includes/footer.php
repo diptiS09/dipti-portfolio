@@ -8,13 +8,13 @@
 
     <div class="footer-right">
 
-        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="https://github.com/diptiS09" target="_blank"><i class="fa-brands fa-github"></i></a>
 
-        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/dipti-surve/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
 
-        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        <a href="mailto:diptiisurve@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
 
-        <a href="#"><i class="fa-solid fa-palette"></i></a>
+        <a href="https://www.instagram.com/diptis_palette/" target="_blank"><i class="fa-solid fa-palette"></i></a>
 
     </div>
 

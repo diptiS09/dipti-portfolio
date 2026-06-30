@@ -21,9 +21,9 @@
         </h2>
 
         <div class="socials">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/diptiS09" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/dipti-surve/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/diptis_palette/" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
 
         <div class="hero-left w-1/2 text-white flex">
@@ -50,7 +50,9 @@
 
                 <div class="hero-actions">
                     <button class="primary-btn">View Projects</button>
-                    <button class="secondary-btn">Download CV</button>
+                    <a
+                        href="assets/Dipti-Surve-Resume.pdf"
+                        download><button class="secondary-btn">Download CV</button></a>
                 </div>
             </div>
         </div>
@@ -492,7 +494,7 @@
                 software both begin with imagination.
             </p>
 
-            <a href="#" class="art-btn">
+            <a href="https://www.instagram.com/diptis_palette/" target="_blank" class="art-btn">
                 Visit My Art Portfolio →
             </a>
 
@@ -607,7 +609,7 @@
         </div>
 
     </section>
-
+    
     <section class="contact" id="contact">
 
         <div class="contact-left">
@@ -629,20 +631,20 @@
 
             <div class="contact-links">
 
-                <a href="mailto:dipti@example.com" class="contact-item">
+                <a href="mailto:diptiisurve@gmail.com" class="contact-item">
                     <div class="contact-icon">
                         <i class="fa-solid fa-envelope"></i>
                     </div>
 
                     <div class="contact-content">
                         <small>Email</small>
-                        <h4>dipti@example.com</h4>
+                        <h4>diptiisurve@gmail.com</h4>
                     </div>
 
                     <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
                 </a>
 
-                <a href="https://linkedin.com/in/dipti"
+                <a href="https://www.linkedin.com/in/dipti-surve"
                     target="_blank"
                     class="contact-item">
 
@@ -659,7 +661,7 @@
 
                 </a>
 
-                <a href="https://github.com/diptisurve"
+                <a href="https://github.com/diptiS09"
                     target="_blank"
                     class="contact-item">
 
@@ -684,23 +686,27 @@
 
         <div class="contact-right">
 
-            <form>
+<form  id="contactForm" action="contact.php" method="POST">
 
                 <div class="input-group">
+        <input type="text" name="name" placeholder="Your Name" required>
 
-                    <input type="text" placeholder="Your Name">
+        <input type="email" name="email" placeholder="Email Address" required>
+    </div>
 
-                    <input type="email" placeholder="Email Address">
+    <input type="text" name="subject" placeholder="Subject" required>
 
-                </div>
+    <textarea
+        rows="6"
+        name="message"
+        placeholder="Tell me about your project..."
+        required></textarea>
 
-                <input type="text" placeholder="Subject">
+    <button type="submit" id="sendBtn">
+        Send Message
+    </button>
 
-                <textarea rows="6" placeholder="Tell me about your project..."></textarea>
-
-                <button>
-                    Send Message
-                </button>
+    <p id="formMessage"></p>
 
             </form>
 
@@ -708,10 +714,73 @@
 
     </section>
 
+   <?php include 'assets/includes/footer.php' ?>
 
-    <?php include 'assets/includes/footer.php' ?>
+<script>
+        const form = document.getElementById("contactForm");
+const message = document.getElementById("formMessage");
+const sendbutton = document.getElementById("sendBtn");
 
+form.addEventListener("submit", async function(e){
 
+    e.preventDefault();
+
+    message.innerHTML = "";
+    message.className = "";
+
+    const formData = new FormData(form);
+
+    sendbutton.disabled = true;
+    sendbutton.innerHTML = "Sending...";
+
+    try{
+
+        const response = await fetch(form.action,{
+            method:"POST",
+            body:formData
+        });
+
+      const result = await response.json();
+
+if (result.status === "success") {
+
+    message.innerHTML = result.message;
+    message.className = "success";
+
+    form.reset();
+
+    // Hide after 5 seconds
+    setTimeout(() => {
+        message.style.display = "none";
+        message.innerHTML = "";
+        message.className = "";
+    }, 5000);
+
+} else {
+
+    message.innerHTML = result.message;
+    message.className = "error";
+
+    // Hide error after 5 seconds
+    setTimeout(() => {
+        message.style.display = "none";
+        message.innerHTML = "";
+        message.className = "";
+    }, 5000);
+}
+
+    }catch(error){
+
+        message.innerHTML = "Something went wrong. Please try again.";
+        message.classList.add("error");
+
+    }
+
+    sendbutton.disabled = false;
+    sendbutton.innerHTML = "Send Message";
+
+});
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="assets/js/gsap.js"></script>
     <script>
@@ -812,35 +881,36 @@
         });
     </script>
     <script>
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("nav a");
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll("nav a");
 
-const observer = new IntersectionObserver((entries) => {
+        const observer = new IntersectionObserver((entries) => {
 
-    entries.forEach(entry => {
+            entries.forEach(entry => {
 
-        if (entry.isIntersecting) {
+                if (entry.isIntersecting) {
 
-            navLinks.forEach(link => {
+                    navLinks.forEach(link => {
 
-                link.classList.remove("active");
+                        link.classList.remove("active");
 
-                if (link.getAttribute("href") === "#" + entry.target.id) {
-                    link.classList.add("active");
+                        if (link.getAttribute("href") === "#" + entry.target.id) {
+                            link.classList.add("active");
+                        }
+
+                    });
+
                 }
 
             });
 
-        }
+        }, {
+            threshold: 0.5
+        });
 
-    });
-
-}, {
-    threshold: 0.5
-});
-
-sections.forEach(section => observer.observe(section));
-</script>
+        sections.forEach(section => observer.observe(section));
+    </script>
+    
 </body>
 
 </html>

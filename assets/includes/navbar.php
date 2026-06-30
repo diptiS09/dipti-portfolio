@@ -15,8 +15,14 @@
 
  <ul class="flex list-none justify-end gap-4">
  <li>
-  <a href="#" class="resume-btn">
-    Resume
+  <a href="assets/Dipti-Surve-Resume.pdf" class="resume-btn"  
+    target="_blank">
+    RESUME
+    </a>
+</li>
+<li>
+  <a href="#contact" class="hire-btn"  >
+    HIRE ME
   </a>
 </li>
 </ul>
