@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dipti Surve | Portfolio</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="import" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <?php include 'assets/includes/navbar.php' ?>
+    <section class="hero bg-[rgb(9,21,51)] h-vh flex w-full" id="home">
+
+        <h2 class="bg-text">
+            DEVELOPER
+        </h2>
+
+        <div class="socials">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <div class="hero-left w-1/2 text-white flex">
+            <div class="intro">
+                <p class="hero-tag">
+                    ✦ Available for Freelance Work
+                </p>
+                <p class="intro-line">
+                    Hi, I'm Dipti Surve
+                </p>
+                <h1 class="hero-title">
+                    Building Digital
+                    <span>Experiences</span>
+                </h1>
+                <h3 class="role">
+                    Frontend Developer
+
+                </h3>
+                <p class="hero-text">
+                    Frontend Developer specializing in modern,
+                    responsive and high-performance web applications
+                    with Angular, JavaScript and modern UI technologies.
+                </p>
+
+                <div class="hero-actions">
+                    <button class="primary-btn">View Projects</button>
+                    <button class="secondary-btn">Download CV</button>
+                </div>
+            </div>
+        </div>
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="hero-right w-1/2 flex">
+            <div class="img-container">
+                <img
+                    class="hero-image"
+                    src="assets/images/profile.png"
+                    alt="">
+            </div>
+
+            <div class="floating-card card-1">
+                <i class="fa-solid fa-code"></i>
+                <div>
+                    <h3>2+ Years</h3>
+                    <p>Frontend Development</p>
+                </div>
+            </div>
+            <div class="floating-card card-2">
+                <i class="fa-solid fa-layer-group"></i>
+                <div>
+                    <h3>Angular</h3>
+                    <p>Specialist</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+
+    </section>
+
+    <section class="about" id="about">
+
+        <div class="section-heading">
+            <p>Get To Know Me</p>
+            <h2>About Me</h2>
+        </div>
+
+        <div class="about-container">
+
+            <div class="about-content">
+
+                <div class="abt-left">
+                    <span class="about-tag">
+                        Frontend Developer
+                    </span>
+
+                    <p class="abt-para">
+
+                        I'm Dipti Surve, a passionate Frontend Developer
+                        with 2+ years of experience building responsive,
+                        scalable and user-friendly web applications.
+
+                        I enjoy transforming ideas into beautiful digital
+                        experiences using Angular, JavaScript and modern
+                        UI technologies.
+
+                    </p>
+
+                    <!-- Stack -->
+                    <div class="stat-row">
+                        <div class="row-box">
+                            <h2>2+</h2>
+                            <p>Years Experience</p>
+                        </div>
+
+                        <div class="row-box">
+                            <h2>8+</h2>
+                            <p>Projects</p>
+                        </div>
+
+
+                        <div class="row-box">
+                            <h2>10+</h2>
+                            <p>Technologies</p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- <p>"Always learning. Always building. Always improving."</p> -->
+                </div>
+                <!-- Tech Stack -->
+                <div class="abt-right">
+                    <div class="about-stats">
+
+                        <div class="stat-box">
+                            <h3><i class="fa-brands fa-angular"></i></h3>
+                            <h4>Frontend</h34>
+                                <p>Angular, Typescript, Javascript</p>
+                        </div>
+
+                        <div class="stat-box">
+                            <h3><i class="fa-solid fa-screwdriver-wrench"></i></h3>
+                            <h4>Backend</h4>
+                            <p>Node.js, Express</p>
+                        </div>
+
+                        <div class="stat-box">
+                            <h3><i class="fa-solid fa-palette"></i></h3>
+                            <h4>Design</h4>
+                            <p>Html, css, Bootstrap, Tailwind css</p>
+                        </div>
+
+                        <div class="stat-box">
+                            <h3><i class="fa-solid fa-rocket"></i></h3>
+                            <h4>Devops</h4>
+                            <p>Git/Github</p>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <section class="journey" id="experience">
+
+                <div class="section-heading">
+                    <p>MY JOURNEY</p>
+                    <!-- <h2>Experience & Learning</h2> -->
+                </div>
+
+                <div class="journey-container">
+
+                    <div class="journey-card">
+                        <div class="icon">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+
+                        <span>2023 - Present</span>
+
+                        <h3>Frontend Developer</h3>
+
+                        <h4>Technical Bazaar</h4>
+                    </div>
+
+
+                    <div class="journey-card">
+                        <div class="icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+
+                        <span>Certification</span>
+
+                        <h3>Full-Stack Development</h3>
+
+                        <h4>Apna College</h4>
+                    </div>
+
+                    <div class="journey-card">
+                        <div class="icon">
+                            <i class="fa-brands fa-java"></i>
+                        </div>
+
+                        <span>Certification</span>
+
+                        <h3>Java Programming</h3>
+
+                        <h4>Smart Training Associate</h4>
+                    </div>
+
+                    <div class="journey-card">
+                        <div class="icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+
+                        <span>2020 - 2023</span>
+
+                        <h3>B.Sc IT</h3>
+
+                        <h4>University of Mumbai</h4>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+
+        </div>
+
+
+    </section>
+
+    <section class="skills" id="skills">
+
+        <div class="section-heading">
+            <p>What I Know</p>
+            <h2>Skills & Technologies</h2>
+        </div>
+
+        <div class="skills-wrapper">
+
+            <!-- LEFT -->
+
+            <div class="skills-left">
+
+                <h3>Core Development</h3>
+
+                <!-- Angular -->
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>Angular</span>
+                        <span>90%</span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress angular"></div>
+                    </div>
+                </div>
+
+                <!-- JS -->
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>JavaScript</span>
+                        <span>88%</span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress js"></div>
+                    </div>
+                </div>
+
+                <!-- TS -->
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>TypeScript</span>
+                        <span>85%</span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress ts"></div>
+                    </div>
+                </div>
+
+                <!-- HTML -->
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>HTML / CSS</span>
+                        <span>95%</span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress html"></div>
+                    </div>
+                </div>
+
+                <!-- Node -->
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>Node.js</span>
+                        <span>70%</span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress node"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="skills-right">
+
+                <h3>Tools & Technologies</h3>
+
+                <div class="badge-container">
+
+                    <span>Bootstrap</span>
+                    <span>Tailwind CSS</span>
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>VS Code</span>
+                    <span>Postman</span>
+                    <span>REST API</span>
+                    <span>MySQL</span>
+                    <span>WordPress</span>
+                    <span>Cloudflare</span>
+                    <span>cPanel</span>
+                    <span>Namecheap</span>
+                    <span>GoDaddy</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="projects" id="projects">
+
+        <div class="section-title">
+            <h2>Featured Projects</h2>
+            <p>Some things I've built.</p>
+        </div>
+
+        <div class="project-showcase">
+
+            <div class="project-list">
+
+                <div class="project-item active"
+                    data-title="Developer Portfolio"
+                    data-desc="Modern animated portfolio built using Angular, GSAP and responsive UI."
+                    data-image="assets/images/portfolio.png"
+                    data-tech="Angular,TypeScript,GSAP,SCSS"
+                    data-live="#"
+                    data-github="#">
+
+                    <span>01</span>
+                    <div>
+                        <h3>Developer Portfolio</h3>
+                        <small>Personal</small>
+                    </div>
+
+                </div>
+
+                <div class="project-item"
+                    data-title="Lantava"
+                    data-desc="Luxury hospitality website with responsive layouts and booking features."
+                    data-image="assets/images/lantava.png"
+                    data-tech="PHP,Bootstrap,MySQL"
+                    data-live="#"
+                    data-github="#">
+
+                    <span>02</span>
+
+                    <div>
+                        <h3>Lantava</h3>
+                        <small>Professional</small>
+                    </div>
+
+                </div>
+
+                <div class="project-item"
+                    data-title="MoonStars"
+                    data-desc="Movie recommendation platform using Angular APIs."
+                    data-image="assets/images/moonstars.png"
+                    data-tech="Angular,RxJS,REST API"
+                    data-live="#"
+                    data-github="#">
+
+                    <span>03</span>
+
+                    <div>
+                        <h3>MoonStars</h3>
+                        <small>Professional</small>
+                    </div>
+
+                </div>
+
+                <div class="project-item"
+                    data-title="Admin Dashboard"
+                    data-desc="Complete CMS dashboard with analytics and management tools."
+                    data-image="assets/images/admin.png"
+                    data-tech="Angular,Chart.js,Node"
+                    data-live="#"
+                    data-github="#">
+
+                    <span>04</span>
+
+                    <div>
+                        <h3>Admin Dashboard</h3>
+                        <small>Professional</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="project-preview">
+
+                <img id="preview-image" src="assets/images/portfolio.png">
+
+                <div class="preview-content">
+
+                    <h2 id="preview-title">
+                        Developer Portfolio
+                    </h2>
+
+                    <p id="preview-desc">
+                        Modern animated portfolio built using Angular, GSAP and responsive UI.
+                    </p>
+
+                    <div id="preview-tech" class="tech-list">
+
+                    </div>
+
+                    <div class="actions">
+
+                        <a id="live-link" href="#">Live</a>
+
+                        <a id="github-link" href="#">Github</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="artwork" id="artwork">
+
+        <div class="art-header">
+
+            <span class="section-tag">
+                Beyond Code
+            </span>
+
+            <h2>
+                Creativity Doesn't End With Programming
+            </h2>
+
+            <p>
+                When I'm away from the keyboard, you'll usually find me painting,
+                sketching, building handmade crafts, or experimenting with new
+                creative ideas. These projects remind me that good design and good
+                software both begin with imagination.
+            </p>
+
+            <a href="#" class="art-btn">
+                Visit My Art Portfolio →
+            </a>
+
+        </div>
+
+
+
+        <div class="art-grid">
+
+            <div class="art-card large">
+
+                <img src="assets/images/hobbies/illustration.png">
+
+                <div class="art-overlay">
+
+                    <span>Acrylic Painting</span>
+
+                    <p><i>A custom acrylic portrait celebrating the bond between people and pets.</i></p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="art-card">
+
+                <img src="assets/images/hobbies/harry.png">
+
+                <div class="art-overlay">
+
+                    <span>Polymer Clay Art</span>
+
+                    <p><i>A handcrafted miniature keychain inspired by iconic fantasy characters.</i></p>
+
+                </div>
+
+            </div>
+
+            <div class="art-card">
+
+                <img src="assets/images/hobbies/sketch.jpg">
+
+                <div class="art-overlay">
+
+                    <span>Pencil Sketch</span>
+
+                    <p><i>A graphite portrait focusing on expression, detail, and traditional elegance.</i></p>
+
+                </div>
+
+            </div>
+
+            <div class="art-card">
+
+                <img src="assets/images/hobbies/crochet.png">
+
+                <div class="art-overlay">
+
+                    <span>Crochet</span>
+
+                    <p><i>A handmade floral crochet tote bag.</i></p>
+
+                </div>
+
+            </div>
+
+            <div class="art-card">
+
+                <img src="assets/images/hobbies/wood.png">
+
+                <div class="art-overlay">
+
+                    <span>Wooden Block Painting</span>
+
+                    <p><i>A acrylic artwork capturing the freshness and colors of nature.</i></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="art-stats">
+
+            <div>
+
+                <h3>20+</h3>
+
+                <p>Original Artworks</p>
+
+            </div>
+
+            <div>
+
+                <h3>6</h3>
+
+                <p>Creative Mediums</p>
+
+            </div>
+
+            <div>
+
+                <h3>∞</h3>
+
+                <p>Ideas Explored</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="contact" id="contact">
+
+        <div class="contact-left">
+
+            <span class="contact-tag">
+                Let's Connect
+            </span>
+
+            <h2>
+                Have an Idea?<br>
+                Let's Build It Together.
+            </h2>
+
+            <p>
+                Whether it's a freelance project, collaboration, or just a
+                conversation about technology and creativity, I'm always happy
+                to connect.
+            </p>
+
+            <div class="contact-links">
+
+                <a href="mailto:dipti@example.com" class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+
+                    <div class="contact-content">
+                        <small>Email</small>
+                        <h4>dipti@example.com</h4>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+                </a>
+
+                <a href="https://linkedin.com/in/dipti"
+                    target="_blank"
+                    class="contact-item">
+
+                    <div class="contact-icon">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <div class="contact-content">
+                        <small>LinkedIn</small>
+                        <h4>Let's Connect</h4>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+
+                </a>
+
+                <a href="https://github.com/diptisurve"
+                    target="_blank"
+                    class="contact-item">
+
+                    <div class="contact-icon">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+
+                    <div class="contact-content">
+                        <small>GitHub</small>
+                        <h4>View My Projects</h4>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="contact-right">
+
+            <form>
+
+                <div class="input-group">
+
+                    <input type="text" placeholder="Your Name">
+
+                    <input type="email" placeholder="Email Address">
+
+                </div>
+
+                <input type="text" placeholder="Subject">
+
+                <textarea rows="6" placeholder="Tell me about your project..."></textarea>
+
+                <button>
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <?php include 'assets/includes/footer.php' ?>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="assets/js/gsap.js"></script>
+    <script>
+        const items = document.querySelectorAll(".project-item");
+
+        const title = document.getElementById("preview-title");
+        const desc = document.getElementById("preview-desc");
+        const image = document.getElementById("preview-image");
+        const tech = document.getElementById("preview-tech");
+        const live = document.getElementById("live-link");
+        const github = document.getElementById("github-link");
+
+        items.forEach(item => {
+
+            item.addEventListener("click", () => {
+
+                items.forEach(i => i.classList.remove("active"));
+
+                item.classList.add("active");
+
+                image.style.opacity = "0";
+
+                setTimeout(() => {
+
+                    image.src = item.dataset.image;
+
+                    title.textContent = item.dataset.title;
+                    desc.textContent = item.dataset.desc;
+
+                    live.href = item.dataset.live;
+                    github.href = item.dataset.github;
+
+                    tech.innerHTML = "";
+
+                    item.dataset.tech.split(",").forEach(t => {
+
+                        const span = document.createElement("span");
+
+                        span.textContent = t;
+
+                        tech.appendChild(span);
+
+                    });
+
+                    image.style.opacity = "1";
+
+                }, 200);
+
+            });
+
+        });
+
+        window.dispatchEvent(new Event('click'));
+    </script>
+    <script>
+        // Floating hover effect
+        document.querySelectorAll(".contact-card").forEach(card => {
+
+            card.addEventListener("mousemove", e => {
+
+                const rect = card.getBoundingClientRect();
+
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                card.style.transform =
+                    `perspective(600px)
+             rotateX(${-(y - rect.height/2)/18}deg)
+             rotateY(${(x - rect.width/2)/18}deg)
+             translateY(-8px)`;
+
+            });
+
+            card.addEventListener("mouseleave", () => {
+
+                card.style.transform =
+                    "perspective(600px) rotateX(0deg) rotateY(0deg) translateY(0px)";
+
+            });
+
+        });
+
+        // Button ripple
+        const button = document.querySelector(".contact-form-card button");
+
+        button.addEventListener("click", function(e) {
+
+            e.preventDefault();
+
+            this.innerHTML = "✓ Message Sent";
+
+            setTimeout(() => {
+
+                this.innerHTML = 'Send Message <i class="fa-solid fa-arrow-right"></i>';
+
+            }, 2500);
+
+        });
+    </script>
+    <script>
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            navLinks.forEach(link => {
+
+                link.classList.remove("active");
+
+                if (link.getAttribute("href") === "#" + entry.target.id) {
+                    link.classList.add("active");
+                }
+
+            });
+
+        }
+
+    });
+
+}, {
+    threshold: 0.5
+});
+
+sections.forEach(section => observer.observe(section));
+</script>
+</body>
+
+</html>
