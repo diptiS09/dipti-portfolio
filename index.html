@@ -14,11 +14,11 @@
 </head>
 
 <body>
-    <nav class="bg-[rgb(9,21,51)] flex grid grid-cols-3 items-center h-6px h-14 px-8">
-        <div class="justify-self-start">
+    <!-- <nav>
+        <div class="logo-container">
             <img src="assets/images/logo.png" alt="Logo" class="logo">
         </div>
-        <ul class="flex gap-10 w-2/6 text-white list-none justify-start">
+        <ul class="nav-container">
             <li class="nav-item"><a href="#home">HOME</a></li>
             <li class="nav-item"><a href="#about">ABOUT</a></li>
             <li class="nav-item"><a href="#skills">SKILLS</a></li>
@@ -29,7 +29,7 @@
 
 
 
-        <ul class="flex list-none justify-end gap-4">
+        <ul class="button-container">
             <li>
                 <a href="assets/Dipti-Surve-Resume.pdf" class="resume-btn" target="_blank">
                     RESUME
@@ -41,11 +41,42 @@
                 </a>
             </li>
         </ul>
-    </nav>
+
+       
+             <div class="menu-btn">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+             <div class="overlay"></div>
+
+         <ul class="mob-nav-container">
+            <button class="cross-btn" type="button">
+    <i class="fa-solid fa-xmark"></i>
+</button>
+            <li class="nav-item"><a href="#home">HOME</a></li>
+            <li class="nav-item"><a href="#about">ABOUT</a></li>
+            <li class="nav-item"><a href="#skills">SKILLS</a></li>
+            <li class="nav-item"><a href="#projects">PROJECTS</a></li>
+            <li class="nav-item"><a href="#artwork">ARTWORK</a></li>
+            <li class="nav-item"><a href="#contact">CONTACT</a></li>
+            <li class="nav-item">
+                <a href="assets/Dipti-Surve-Resume.pdf" class="resume-btn" target="_blank">
+                    RESUME
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact" class="hire-btn">
+                    HIRE ME
+                </a>
+            </li>
+        </ul>
+        
+
+    </nav> -->
 
 
 
-    <section class="hero bg-[rgb(9,21,51)] h-vh flex w-full" id="home">
+    <section class="hero" id="home">
 
         <h2 class="bg-text">
             DEVELOPER
@@ -396,19 +427,19 @@
 
             <div class="project-list">
 
-                <div class="project-item active" data-title="Developer Portfolio"
-                    data-desc="Modern animated portfolio built using Angular, GSAP and responsive UI."
-                    data-image="assets/images/portfolio.png" data-tech="Angular,TypeScript,GSAP,SCSS" data-live="#"
+                <div class="project-item" data-title="Blog Website"
+                    data-desc="Developed the frontend logic for a multi-theme Angular blog platform with REST API integration. Implemented reusable directives and shared components to support four different UI themes while maintaining a single codebase."
+                    data-image="assets/images/learnforex.png" data-tech="Angular,Rest API Integration,RxJS,Git" data-live="https://learnforex.live/"
                     data-github="#">
 
                     <span>01</span>
+
                     <div>
-                        <h3>Developer Portfolio</h3>
-                        <small>Personal</small>
+                        <h3>Learnforex</h3>
+                        <small>Professional</small>
                     </div>
 
                 </div>
-
                 <div class="project-item" data-title="Lantava"
                     data-desc="Luxury hospitality website with responsive layouts and booking features."
                     data-image="assets/images/lantava.png" data-tech="PHP,Bootstrap,MySQL" data-live="#"
@@ -437,16 +468,14 @@
 
                 </div>
 
-                <div class="project-item" data-title="Admin Dashboard"
-                    data-desc="Complete CMS dashboard with analytics and management tools."
-                    data-image="assets/images/admin.png" data-tech="Angular,Chart.js,Node" data-live="#"
-                    data-github="#">
+                <div class="project-item active" data-title="Developer Portfolio"
+                    data-desc="Modern animated portfolio built using Angular, GSAP and responsive UI."
+                    data-image="assets/images/portfolio.png" data-tech="HTML,CSS,GSAP,JS" data-live="#" data-github="#">
 
                     <span>04</span>
-
                     <div>
-                        <h3>Admin Dashboard</h3>
-                        <small>Professional</small>
+                        <h3>Developer Portfolio</h3>
+                        <small>Personal</small>
                     </div>
 
                 </div>
@@ -474,8 +503,7 @@
                     </div>
 
                     <div class="actions">
-
-                        <a id="live-link" href="#">Live</a>
+                        <a id="live-link" target="_blank">Live</a>
 
                         <a id="github-link" href="#">Github</a>
 
@@ -625,7 +653,7 @@
 
     </section>
 
-    <section class="contact" id="contact">
+    <!-- <section class="contact" id="contact">
 
         <div class="contact-left">
 
@@ -719,7 +747,7 @@
 
         </div>
 
-    </section>
+    </section> -->
 
     <footer class="footer">
 
@@ -940,6 +968,37 @@
 
         sections.forEach(section => observer.observe(section));
     </script>
+    <script>const menuBtn = document.querySelector(".menu-btn");
+        const mobileMenu = document.querySelector(".mob-nav-container");
+        const closeBtn = document.querySelector(".cross-btn");
+        const overlay = document.querySelector(".overlay");
+        const menuIcon = document.querySelector("fa-bars");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.add("active");
+            overlay.classList.add("active");
+            menuBtn.classList.add("hide");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            mobileMenu.classList.remove("active");
+            overlay.classList.remove("active");
+            menuBtn.classList.remove("hide");
+        });
+
+        overlay.addEventListener("click", () => {
+            mobileMenu.classList.remove("active");
+            overlay.classList.remove("active");
+            menuBtn.classList.remove("hide");
+        });
+
+        document.querySelectorAll(".mob-nav-container a").forEach(link => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.remove("active");
+                overlay.classList.remove("active");
+                menuBtn.classList.remove("hide");
+            });
+        });</script>
 
 </body>
 
