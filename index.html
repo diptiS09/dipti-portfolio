@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <!-- <nav>
+    <nav>
         <div class="logo-container">
             <img src="assets/images/logo.png" alt="Logo" class="logo">
         </div>
@@ -42,17 +42,17 @@
             </li>
         </ul>
 
-       
-             <div class="menu-btn">
-        <i class="fa-solid fa-bars"></i>
-    </div>
 
-             <div class="overlay"></div>
+        <div class="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
 
-         <ul class="mob-nav-container">
+        <div class="overlay"></div>
+
+        <ul class="mob-nav-container">
             <button class="cross-btn" type="button">
-    <i class="fa-solid fa-xmark"></i>
-</button>
+                <i class="fa-solid fa-xmark"></i>
+            </button>
             <li class="nav-item"><a href="#home">HOME</a></li>
             <li class="nav-item"><a href="#about">ABOUT</a></li>
             <li class="nav-item"><a href="#skills">SKILLS</a></li>
@@ -70,9 +70,9 @@
                 </a>
             </li>
         </ul>
-        
 
-    </nav> -->
+
+    </nav>
 
 
 
@@ -111,7 +111,7 @@
                 </p>
 
                 <div class="hero-actions">
-                    <button class="primary-btn">View Projects</button>
+                    <a class="primary-btn" href="#projects">View Projects</a>
                     <a href="assets/Dipti-Surve-Resume.pdf" download><button class="secondary-btn">Download
                             CV</button></a>
                 </div>
@@ -429,7 +429,8 @@
 
                 <div class="project-item active" data-title="Multi-Theme Blog Platform"
                     data-desc="Developed the frontend logic for a multi-theme Angular blog platform with REST API integration. Implemented reusable directives and shared components to support four different UI themes while maintaining a single codebase."
-                    data-image="assets/images/learnforex.png" data-tech="Angular,Rest API Integration,RxJS,Git" data-live="https://learnforex.live/"
+                    data-image="assets/images/learnforex.png"
+                    data-tech="Angular,Typescript,Rest API Integration,RxJS,Git" data-live="https://learnforex.live/"
                     data-github="#">
 
                     <span>01</span>
@@ -440,12 +441,43 @@
                     </div>
 
                 </div>
-                <div class="project-item" data-title="Lantava"
-                    data-desc="Lantava is an investment platform website designed with a professional, responsive UI. Built using HTML, CSS, JavaScript, and PHP, it features a dynamic application form, contact functionality, and a clean user-focused experience."
-                    data-image="assets/images/lantava.png" data-tech="HTML,CSS,JavaScript,PHP,PHPMailer,Responsive Design" data-live="https://Lantava.com/"
-                    data-github="#">
+
+                <div class="project-item" data-title="Admin Dashboard – Ad & Article Management"
+                    data-desc="Built an administrative dashboard for managing ads and blog articles, featuring CRUD functionality, validation logic, and REST API integration for efficient content management."
+                    data-image="assets/images/admin.png" data-tech="Angular,Typescript,Rest API Integration,RxJS,Git"
+                    data-live="https://learnforex.live/" data-github="#">
 
                     <span>02</span>
+
+                    <div>
+                        <h3>Content Management System (CMS)</h3>
+                        <small>Professional</small>
+                    </div>
+
+                </div>
+
+                <div class="project-item" data-title="Moon & Stars Fashion Show Portal"
+                    data-desc="Moon & Stars is a full-stack web application where I developed the frontend, integrated REST APIs, built backend APIs for user registration, and implemented secure Razorpay payment gateway integration for seamless online transactions."
+                    data-image="assets/images/moonstars.png"
+                    data-tech="Angular,RxJS,REST API,Node.js,Express.js,Razorpay Integration,MySQL"
+                    data-live="https://register.moonandstars.io/" data-github="#">
+
+                    <span>03</span>
+
+                    <div>
+                        <h3>Moonandstars</h3>
+                        <small>Professional</small>
+                    </div>
+
+                </div>
+
+                <div class="project-item" data-title="Lantava"
+                    data-desc="Lantava is an investment platform website designed with a professional, responsive UI. Built using HTML, CSS, JavaScript, and PHP, it features a dynamic application form, contact functionality, and a clean user-focused experience."
+                    data-image="assets/images/lantava.png"
+                    data-tech="HTML,CSS,JavaScript,PHP,PHPMailer,Responsive Design" data-live="https://Lantava.com/"
+                    data-github="#">
+
+                    <span>04</span>
 
                     <div>
                         <h3>Lantava</h3>
@@ -454,27 +486,14 @@
 
                 </div>
 
-                <div class="project-item" data-title="Moonandstars"
-                    data-desc="Moon & Stars is a full-stack web application where I developed the frontend, integrated REST APIs, built backend APIs for user registration, and implemented secure Razorpay payment gateway integration for seamless online transactions."
-                    data-image="assets/images/moonstars.png" data-tech="Angular,RxJS,REST API,Node.js,Express.js,Razorpay Integration,MySQL" data-live="https://register.moonandstars.io/"
-                    data-github="#">
+                <div class="project-item" data-title="Portfolio Website"
+                    data-desc="Fully responsive personal portfolio showcasing my skills, projects, experience, and artwork. Designed with a clean UI, smooth animations, and optimized performance to provide an engaging user experience across all devices."
+                    data-image="assets/images/portfolio.png" data-tech="HTML,CSS,GSAP,JS"
+                    data-live="https://dipti-surve.vercel.app" data-github="#">
 
-                    <span>03</span>
-
+                    <span>05</span>
                     <div>
-                        <h3>MoonStars</h3>
-                        <small>Professional</small>
-                    </div>
-
-                </div>
-
-                <div class="project-item" data-title="Developer Portfolio"
-                    data-desc="Modern animated portfolio built using Angular, GSAP and responsive UI."
-                    data-image="assets/images/portfolio.png" data-tech="HTML,CSS,GSAP,JS" data-live="https://dipti-surve.vercel.app" data-github="#">
-
-                    <span>04</span>
-                    <div>
-                        <h3>Developer Portfolio</h3>
+                        <h3>Portfolio Website</h3>
                         <small>Personal</small>
                     </div>
 
@@ -491,11 +510,13 @@
                 <div class="preview-content">
 
                     <h2 id="preview-title">
-                        Blog Website
+                        Multi-Theme Blog Platform
                     </h2>
 
                     <p id="preview-desc">
-                       Developed the frontend logic for a multi-theme Angular blog platform with REST API integration. Implemented reusable directives and shared components to support four different UI themes while maintaining a single codebase.
+                        Developed the frontend logic for a multi-theme Angular blog platform with REST API integration.
+                        Implemented reusable directives and shared components to support four different UI themes while
+                        maintaining a single codebase.
                     </p>
 
                     <div id="preview-tech" class="tech-list">
@@ -656,7 +677,7 @@
 
     </section>
 
-    <!-- <section class="contact" id="contact">
+    <section class="contact" id="contact">
 
         <div class="contact-left">
 
@@ -687,7 +708,6 @@
                         <h4>diptiisurve@gmail.com</h4>
                     </div>
 
-                    <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
                 </a>
 
                 <a href="https://www.linkedin.com/in/dipti-surve" target="_blank" class="contact-item">
@@ -701,7 +721,6 @@
                         <h4>Let's Connect</h4>
                     </div>
 
-                    <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
 
                 </a>
 
@@ -716,7 +735,6 @@
                         <h4>View My Projects</h4>
                     </div>
 
-                    <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
 
                 </a>
 
@@ -728,7 +746,7 @@
 
         <div class="contact-right">
 
-            <form id="contactForm" action="contact.php" method="POST">
+            <form id="contactForm">
 
                 <div class="input-group">
                     <input type="text" name="name" placeholder="Your Name" required>
@@ -750,7 +768,7 @@
 
         </div>
 
-    </section> -->
+    </section>
 
     <footer class="footer">
 
@@ -971,7 +989,8 @@
 
         sections.forEach(section => observer.observe(section));
     </script>
-    <script>const menuBtn = document.querySelector(".menu-btn");
+    <script>
+        const menuBtn = document.querySelector(".menu-btn");
         const mobileMenu = document.querySelector(".mob-nav-container");
         const closeBtn = document.querySelector(".cross-btn");
         const overlay = document.querySelector(".overlay");
@@ -1001,7 +1020,58 @@
                 overlay.classList.remove("active");
                 menuBtn.classList.remove("hide");
             });
-        });</script>
+        });
+    </script>
+    <script>
+        const contactForm = document.getElementById("contactForm");
+        const formMessage = document.getElementById("formMessage");
+        const sendBtn = document.getElementById("sendBtn");
+
+        contactForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            sendBtn.disabled = true;
+            sendBtn.textContent = "Sending...";
+
+            formMessage.textContent = "";
+
+            const formData = {
+                name: contactForm.name.value.trim(),
+                email: contactForm.email.value.trim(),
+                subject: contactForm.subject.value.trim(),
+                message: contactForm.message.value.trim(),
+            };
+
+            try {
+                const response = await fetch("/api/contact", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(formData),
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    formMessage.style.color = "green";
+                    formMessage.textContent = result.message;
+                    contactForm.reset();
+                } else {
+                    formMessage.style.color = "red";
+                    formMessage.textContent = result.message;
+                }
+
+            } catch (error) {
+                formMessage.style.color = "red";
+                formMessage.textContent =
+                    "Unable to send message. Please try again.";
+            }
+
+            sendBtn.disabled = false;
+            sendBtn.textContent = "Send Message";
+        });
+    </script>
 
 </body>
 
