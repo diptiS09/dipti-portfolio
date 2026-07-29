@@ -791,72 +791,7 @@
         </div>
 
     </footer>
-<!-- 
-    <script>
-        const form = document.getElementById("contactForm");
-        const message = document.getElementById("formMessage");
-        const sendbutton = document.getElementById("sendBtn");
 
-        form.addEventListener("submit", async function (e) {
-
-            e.preventDefault();
-
-            message.innerHTML = "";
-            message.className = "";
-
-            const formData = new FormData(form);
-
-            sendbutton.disabled = true;
-            sendbutton.innerHTML = "Sending...";
-
-            try {
-
-                const response = await fetch(form.action, {
-                    method: "POST",
-                    body: formData
-                });
-
-                const result = await response.json();
-
-                if (result.status === "success") {
-
-                    message.innerHTML = result.message;
-                    message.className = "success";
-
-                    form.reset();
-
-                    // Hide after 5 seconds
-                    setTimeout(() => {
-                        message.style.display = "none";
-                        message.innerHTML = "";
-                        message.className = "";
-                    }, 5000);
-
-                } else {
-
-                    message.innerHTML = result.message;
-                    message.className = "error";
-
-                    // Hide error after 5 seconds
-                    setTimeout(() => {
-                        message.style.display = "none";
-                        message.innerHTML = "";
-                        message.className = "";
-                    }, 5000);
-                }
-
-            } catch (error) {
-
-                message.innerHTML = "Something went wrong. Please try again.";
-                message.classList.add("error");
-
-            }
-
-            sendbutton.disabled = false;
-            sendbutton.innerHTML = "Send Message";
-
-        });
-    </script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="assets/js/gsap.js"></script>
@@ -914,7 +849,7 @@
 
         window.dispatchEvent(new Event('click'));
     </script>
-    <!-- <script>
+    <script>
         // Floating hover effect
         document.querySelectorAll(".contact-card").forEach(card => {
 
@@ -941,24 +876,7 @@
             });
 
         });
-
-        // Button ripple
-        const button = document.querySelector(".contact-form-card button");
-
-        button.addEventListener("click", function (e) {
-
-            e.preventDefault();
-
-            this.innerHTML = "✓ Message Sent";
-
-            setTimeout(() => {
-
-                this.innerHTML = 'Send Message <i class="fa-solid fa-arrow-right"></i>';
-
-            }, 2500);
-
-        });
-    </script> -->
+    </script>
     <script>
         const sections = document.querySelectorAll("section");
         const navLinks = document.querySelectorAll("nav a");
@@ -1031,7 +949,7 @@
             e.preventDefault();
 
             sendBtn.disabled = true;
-            sendBtn.textContent = "Sending...";
+            sendBtn.innerHTML = "Sending...";
 
             formMessage.textContent = "";
 
@@ -1053,19 +971,40 @@
 
                 const result = await response.json();
 
-                if (result.success) {
-                    formMessage.style.color = "green";
-                    formMessage.textContent = result.message;
-                    contactForm.reset();
-                } else {
-                    formMessage.style.color = "red";
-                    formMessage.textContent = result.message;
-                }
+               if (result.success) {
 
-            } catch (error) {
-                formMessage.style.color = "red";
-                formMessage.textContent = "Unable to send message. Please try again.";
-            }
+    formMessage.className = "success";
+    formMessage.textContent = result.message;
+
+    sendBtn.innerHTML = "✓ Message Sent";
+    sendBtn.disabled = true;
+
+    contactForm.reset();
+
+    setTimeout(() => {
+        formMessage.textContent = "";
+        formMessage.className = "";
+
+        sendBtn.disabled = false;
+        sendBtn.innerHTML = 'Send Message';
+    }, 3000);
+
+} else {
+
+    formMessage.className = "error";
+    formMessage.textContent = result.message;
+
+    sendBtn.disabled = false;
+    sendBtn.innerHTML = "Send Message";
+}
+            }catch (error) {
+
+    formMessage.className = "error";
+    formMessage.textContent = "Unable to send message. Please try again.";
+
+    sendBtn.disabled = false;
+    sendBtn.innerHTML = "Send Message";
+}
 
             sendBtn.disabled = false;
             sendBtn.textContent = "Send Message";
