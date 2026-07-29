@@ -914,7 +914,7 @@
 
         window.dispatchEvent(new Event('click'));
     </script>
-    <script>
+    <!-- <script>
         // Floating hover effect
         document.querySelectorAll(".contact-card").forEach(card => {
 
@@ -958,7 +958,7 @@
             }, 2500);
 
         });
-    </script>
+    </script> -->
     <script>
         const sections = document.querySelectorAll("section");
         const navLinks = document.querySelectorAll("nav a");
@@ -1064,8 +1064,7 @@
 
             } catch (error) {
                 formMessage.style.color = "red";
-                formMessage.textContent =
-                    "Unable to send message. Please try again.";
+                formMessage.textContent = "Unable to send message. Please try again.";
             }
 
             sendBtn.disabled = false;
