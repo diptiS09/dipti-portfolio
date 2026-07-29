@@ -1,7 +1,6 @@
 const nodemailer = require("nodemailer");
 
 module.exports = async (req, res) => {
-  // Allow only POST requests
   if (req.method !== "POST") {
     return res.status(405).json({
       success: false,
@@ -12,11 +11,10 @@ module.exports = async (req, res) => {
   try {
     const { name, email, subject, message } = req.body;
 
-    // Validation
     if (!name || !email || !subject || !message) {
       return res.status(400).json({
         success: false,
-        message: "Please fill in all fields.",
+        message: "All fields are required.",
       });
     }
 
@@ -29,20 +27,19 @@ module.exports = async (req, res) => {
     });
 
     await transporter.sendMail({
-      from: process.env.EMAIL_USER,
+      from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
       replyTo: email,
-      subject: subject,
+      subject: `Portfolio Contact: ${subject}`,
       html: `
         <h2>New Portfolio Contact</h2>
+        <hr>
 
-        <p><strong>Name:</strong> ${name}</p>
+        <p><b>Name:</b> ${name}</p>
+        <p><b>Email:</b> ${email}</p>
+        <p><b>Subject:</b> ${subject}</p>
 
-        <p><strong>Email:</strong> ${email}</p>
-
-        <p><strong>Subject:</strong> ${subject}</p>
-
-        <p><strong>Message:</strong></p>
+        <h3>Message</h3>
 
         <p>${message.replace(/\n/g, "<br>")}</p>
       `,
@@ -50,15 +47,15 @@ module.exports = async (req, res) => {
 
     return res.status(200).json({
       success: true,
-      message: "Thank you! Your message has been sent successfully.",
+      message: "Message sent successfully.",
     });
 
-  } catch (err) {
-    console.error(err);
+  } catch (error) {
+    console.error(error);
 
     return res.status(500).json({
       success: false,
-      message: "Something went wrong.",
+      message: "Failed to send message.",
     });
   }
 };
