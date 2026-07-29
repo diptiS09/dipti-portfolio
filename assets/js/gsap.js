@@ -4,13 +4,6 @@ gsap.from(".hero-title", {
   duration: 1,
 });
 
-gsap.from(".word", {
-  y: 50,
-  opacity: 0,
-  stagger: 0.2,
-  duration: 0.8
-});
-
 gsap.from(".hero-text", {
   y: 50,
   opacity: 0,
@@ -18,12 +11,12 @@ gsap.from(".hero-text", {
   delay: 0.3,
 });
 
-gsap.from(".hero-btn", {
-  y: 30,
-  opacity: 0,
-  duration: 1,
-  delay: 0.6,
-});
+// gsap.from(".hero-btn", {
+//   y: 30,
+//   opacity: 0,
+//   duration: 1,
+//   delay: 0.6,
+// });
 
 gsap.to(".hero-image", {
   y: -15,
@@ -88,20 +81,20 @@ tl.from(".hero-image", {
 }, "-=0.8");
 
 
-gsap.from(".about-image",{
+// gsap.from(".about-image",{
 
-    x:-120,
+//     x:-120,
 
-    opacity:0,
+//     opacity:0,
 
-    duration:1.2,
+//     duration:1.2,
 
-    scrollTrigger:{
-        trigger:".about",
-        start:"top 70%"
-    }
+//     scrollTrigger:{
+//         trigger:".about",
+//         start:"top 70%"
+//     }
 
-});
+// });
 
 gsap.from(".about-content",{
 
@@ -118,22 +111,6 @@ gsap.from(".about-content",{
 
 });
 
-// gsap.from(".stat-box",{
-
-//     y:60,
-
-//     opacity:0,
-
-//     stagger:.15,
-
-//     duration:.8,
-
-//     scrollTrigger:{
-//         trigger:".about-stats",
-//         start:"top 80%"
-//     }
-
-// });
 
 gsap.from(".timeline-item.left",{
     x:-100,
